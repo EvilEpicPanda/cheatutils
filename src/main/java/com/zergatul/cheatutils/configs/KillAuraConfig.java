@@ -48,7 +48,7 @@ public class KillAuraConfig {
     public void validate() {
         maxRange = MathUtils.clamp(maxRange, 1, 100);
         attackTickInterval = MathUtils.clamp(attackTickInterval, 1, 100);
-        // Removed clamping for extraTicks
+        extraTicks = MathUtils.clamp(extraTicks, -1000, 1000);
         if (maxHorizontalAngle != null) {
             maxHorizontalAngle = MathUtils.clamp(maxHorizontalAngle, 1, 180);
         }
